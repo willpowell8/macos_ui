@@ -195,10 +195,7 @@ class _ResizablePaneState extends State<ResizablePane> {
           SafeArea(
             left: false,
             right: false,
-            child: MacosScrollbar(
-              controller: _scrollController,
-              child: widget.builder(context, _scrollController),
-            ),
+            child: widget.builder(context, _scrollController),
           ),
           if (widget.isResizable && !_resizeOnRight)
             Positioned(
