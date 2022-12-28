@@ -252,7 +252,7 @@ class MacosScrollbarThemeData with Diagnosticable {
 
   @override
   int get hashCode {
-    return hashValues(
+    return Object.hash(
       thickness,
       hoveringThickness,
       showTrackOnHover,
@@ -366,6 +366,7 @@ class MacosScrollbarThemeData with Diagnosticable {
     ));
   }
 
+  /// Merges this [MacosScrollbarThemeData] with another.
   MacosScrollbarThemeData merge(MacosScrollbarThemeData? other) {
     if (other == null) return this;
     return copyWith(
